@@ -1,3 +1,7 @@
+:root {
+    --section-title: 1.5em;
+}
+
 * {
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -9,6 +13,10 @@ body {
 ul {
     list-style-type: none;
     padding-left: 10px;
+}
+
+hr {
+    border-top: 1px solid rgba(0, 0, 0, 0.637);
 }
 
 /* MAIN CONTAINER */
@@ -69,6 +77,94 @@ ul {
 }
 
 /* CONTENT SECTION */
-.main-content{
+.main-content {
     background-color: #cbd5e1;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 10px;
 }
+
+.projects {
+    border: 1px solid black;
+    padding-top: 10px;
+    grid-column: 1/2;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    column-gap: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.main-sidebar {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    gap: 5%;
+}
+
+.announcements {
+    border: 1px solid blue;
+}
+
+.announcements-sub-sec {
+    background-color: white;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.announcements-post {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.announcements-post .title {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.trending {
+    border: 1px solid red;
+
+}
+
+.section-title{
+    font-weight: bold;
+    font-size: var(--section-title);
+}
+
+.trending-sub-sec {
+    background-color: white;
+    border-radius: 10px;
+    height: 30%;
+    display: grid;
+
+}
+
+.card {
+    height: 200px;
+    max-width: 300px;
+    border-left: 7px black solid;
+    border-radius: 10px;
+    margin-left: 10px;
+    padding: 10px;
+    background-color: white;
+  }
+  
+  .card p {
+    color: black;
+    font-weight: normal;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  .card .title {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 0px;
+  }
+  
